@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with Numbers & Forms</title>
+
+    <!--Google Lexend Font-->
+    <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap">
+    
+    <!--PyScript-->
+    <link rel="stylesheet" 
+        href="https://pyscript.net/releases/2025.2.2/core.css">
+
+    <script type="module" 
+        src="https://pyscript.net/releases/2025.2.2/core.js">
+    </script>
+
+	<style>
+  	body{
+		font-family: 'Lexend', sans-serif;
+        background-color: rgb(46, 46, 43);
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding:20px;
+  	}
+    div:not(.gif,#result){
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding:30px;
+        border-radius: 10px;
+        color: rgb(0, 0, 0);
+    }
+    input,select,button{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size:14px;
+        font-family: 'Lexend', sans-serif;
+    }
+    button{
+        background: #b5975c;
+        color: black;
+        cursor: pointer;
+        border:none;
+    }
+    button:hover{
+        background: #a57c3c;
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+    .gif{
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>the MATH WIZARD.</h1>
+        <p>Hand me two numbers and I WILL SOLVE THEM!</p>
+
+        <label for = "num1">First Number:</label>
+
+        <br>
+        
+        <input type="number" id="num1">
+
+        <br><br>
+
+        <label for = "operation">Select Operation:</label>
+
+        <br>
+
+        <select id="operation">
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="x">Multiplication</option>
+        <option value="/">Division</option>
+        </select>
+
+        <br><br>
+
+        <label for = "num2">Second Number:</label>
+        
+        <br>
+
+        <input type="number" id="num2">
+
+        <br><br>
+
+        <button py-click="compute">COMPUTE</button>
+    
+        
+        
+    </div>
+    
+    <br><br>
+
+    <div class="rescontainer">
+        <h1>the RESULT.</h1>
+        <div id="result">
+            <p>give me those NUMBERS.</p>
+        </div>
+        <br>
+        <img class="gif" src="math-gif.gif" alt="math wizard gif">
+    </div>
+
+    <br><br>
+
+
+        
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
